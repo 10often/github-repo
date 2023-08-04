@@ -13,12 +13,19 @@ declare namespace Cypress {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   interface Chainable<Subject> {
     login(email: string, password: string): void;
+    paginatePreparation(): void;
   }
 }
 //
 // -- This is a parent command --
 Cypress.Commands.add('login', (email, password) => {
   console.log('Custom command example: Login', email, password);
+});
+
+Cypress.Commands.add('paginatePreparation', () => {
+  cy.get('input').type('ts challenge');
+  cy.get('#cards').invoke('data', 'cy-count').should('not.be.lessThan', 10);
+  cy.get('#paginator').should('exist');
 });
 //
 // -- This is a child command --

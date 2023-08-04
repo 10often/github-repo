@@ -1,14 +1,12 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import React from 'react';
+import { useRoutes } from 'react-router-dom';
 import styles from './app.module.scss';
-
-import NxWelcome from './nx-welcome';
+import { routes as routeList } from './routes';
 
 export function App() {
-  return (
-    <div>
-      <NxWelcome title="github-repo" />
-    </div>
-  );
+  const routes = useRoutes(routeList);
+
+  return <div className={styles.app}>{routes}</div>;
 }
 
 export default App;

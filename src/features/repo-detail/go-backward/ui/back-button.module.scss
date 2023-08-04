@@ -1,0 +1,25 @@
+.backButton {
+  position: fixed;
+  left: 10px;
+
+  button {
+    display: flex;
+    gap: 8px;
+    background: transparent;
+    box-shadow: none;
+
+    &:hover {
+      background: #dedede;
+    }
+
+    &:active {
+      background: #cecece;
+
+    }
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
