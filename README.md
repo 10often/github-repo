@@ -4,7 +4,7 @@ This project realize searching GitHub repositories with GitHub Graphql API.
 
 ## Start the app
 
-To start the development server run `nx serve github-repo`. Open your browser and navigate to http://localhost:4200/. Happy coding!
+To start the development server run `npm start`. Open your browser and navigate to http://localhost:4200/.
 
 
 ## Generate code
